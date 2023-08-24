@@ -5,6 +5,7 @@
  *@start: start of the stack
  *@index: an integer
  */
+void f_pint(stack_t **start, unsigned int index)
 {
 	if (*start == NULL)
 	{
