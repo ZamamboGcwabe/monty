@@ -38,6 +38,21 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct bus_s - variables -args, file, line content
+ * @arg: value
+ * @file: pointer to monty file
+ * @content: line content
+ * Description: carries values through the program
+ */
+typedef struct bus_s
+{
+	char *content;
+	char *arg;
+	FILE *file;
+
+}  bus_t;
+
 void f_nop(stack_t **start, unsigned int index);
 void f_add(stack_t **start, unsigned int index);
 void f_swap(stack_t **start, unsigned int index);
