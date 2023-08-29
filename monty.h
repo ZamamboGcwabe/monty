@@ -7,7 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <fcntl.h>
-#include <ctypes.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -52,13 +52,15 @@ typedef struct bus_s
 	FILE *file;
 
 }  bus_t;
+extern bus_t bus;
 
-void f_nop(stack_t **start, unsigned int index);
-void f_add(stack_t **start, unsigned int index);
-void f_swap(stack_t **start, unsigned int index);
-void f_pint(stack_t **start, unsigned int index);
-void f_pop(stack_t **start, unsigned int index);
-void f_push(stack_t **start, unsigned int index);
-void f_pall(stack_t **start, unsigned int index);
-
+void nop(stack_t **start, unsigned int index);
+void add(stack_t **start, unsigned int index);
+void swap(stack_t **start, unsigned int index);
+void pint(stack_t **start, unsigned int index);
+void pop(stack_t **start, unsigned int index);
+void push(stack_t **start, unsigned int index);
+void pall(stack_t **start, unsigned int index);
+int main(int argc, char *argv[]);
+int execute(stack_t **start, char *content, unsigned int index, FILE *file)
 #endif
